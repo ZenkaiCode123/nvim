@@ -8,3 +8,5 @@ Session.vim
 # OS files
 .DS_Store
 Thumbs.db
+
+*.log
