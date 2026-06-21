@@ -1,0 +1,10 @@
+# Swap files
+*.swp
+*.swo
+
+# Session files
+Session.vim
+
+# OS files
+.DS_Store
+Thumbs.db
