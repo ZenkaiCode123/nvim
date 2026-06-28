@@ -28,5 +28,15 @@ return {
   config = function(_, opts)
     require("gruvbox").setup(opts)
     vim.cmd.colorscheme("gruvbox")
+    -- after vim.cmd.colorscheme("gruvbox")
+
+    vim.api.nvim_set_hl(0, "FloatBorder", {
+      fg = "#83a598",
+      bg = "NONE",
+    })
+
+    vim.api.nvim_set_hl(0, "NormalFloat", {
+      bg = "#282828",
+    })
   end,
 }
