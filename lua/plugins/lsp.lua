@@ -52,47 +52,7 @@ return {
       vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
       vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
     end,
-  },
+  }
 
-  -- =========================
-  -- Completion (nvim-cmp)
-  -- =========================
-  {
-    "hrsh7th/nvim-cmp",
-    dependencies = {
-      "hrsh7th/cmp-nvim-lsp",
-      "hrsh7th/cmp-buffer",
-      "hrsh7th/cmp-path",
-    },
 
-    config = function()
-      local cmp = require("cmp")
 
-      cmp.setup({
-        window = {
-          completion = cmp.config.window.bordered({
-            max_height = 10,
-            max_width = 50,
-          }),
-          documentation = cmp.config.window.bordered({
-            max_height = 15,
-            max_width = 60,
-          }),
-        },
-
-        mapping = cmp.mapping.preset.insert({
-          ["<C-Space>"] = cmp.mapping.complete(),
-          ["<C-n>"] = cmp.mapping.select_next_item(),
-          ["<C-p>"] = cmp.mapping.select_prev_item(),
-          ["<CR>"] = cmp.mapping.confirm({ select = true }),
-        }),
-
-        sources = {
-          { name = "nvim_lsp", max_item_count = 10 },
-          { name = "buffer", max_item_count = 5 },
-          { name = "path" },
-        },
-      })
-    end,
-  },
-}

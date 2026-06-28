@@ -146,3 +146,20 @@ vim.keymap.set("n", "[h", "<cmd>Gitsigns prev_hunk<CR>")
 vim.keymap.set("n", "<leader>gp", "<cmd>Gitsigns preview_hunk<CR>")
 vim.keymap.set("n", "<leader>gr", "<cmd>Gitsigns reset_hunk<CR>")
 vim.keymap.set("n", "<leader>gb", "<cmd>Gitsigns blame_line<CR>")
+
+vim.keymap.set("n", "<leader>td", function()
+  local buf = vim.fn.bufadd("~/notes/todo.md")
+  vim.fn.bufload(buf)
+
+  local width = math.floor(vim.o.columns * 0.7)
+  local height = math.floor(vim.o.lines * 0.7)
+
+  vim.api.nvim_open_win(buf, true, {
+    relative = "editor",
+    width = width,
+    height = height,
+    row = (vim.o.lines - height) / 2,
+    col = (vim.o.columns - width) / 2,
+    border = "rounded",
+  })
+end, { desc = "Floating Todo" })
