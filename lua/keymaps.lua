@@ -126,6 +126,12 @@ vim.keymap.set("n", "<leader>tn", function()
     vim.cmd("0r ~/notes/Templates/networking.md")
 end, { desc = "Insert Networking template" })
 
+vim.api.nvim_create_autocmd("BufWritePre", {
+    callback = function()
+        vim.lsp.buf.format({ async = false })
+    end,
+})
+
 vim.keymap.set("n", "<leader>ta", function()
     vim.cmd("0r ~/notes/Templates/ai.md")
 end, { desc = "Insert AI template" })
