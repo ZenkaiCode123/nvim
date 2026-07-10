@@ -1,6 +1,7 @@
 vim.g.mapleader = " "
 
 vim.keymap.set("n", "<leader>w", ":w<CR>")
+vim.keymap.set("n", "<leader>.", ":q!")
 vim.keymap.set("n", "<leader>ex", ":exit<CR>")
 vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]])
 vim.keymap.set("n", "<leader>q", ":q<CR>")

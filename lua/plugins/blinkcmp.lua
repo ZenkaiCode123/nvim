@@ -7,21 +7,21 @@ return {
       "rafamadriz/friendly-snippets",
     },
 
-    opts = {
+  opts = {
       keymap = {
-        preset = "default",
+    preset = "enter",
+  },
+    completion = {
+        menu = {
+            border = "rounded",
+    },
+    documentation = {
+      auto_show = true,
+      window = {
+        border = "rounded",
       },
-
-      appearance = {
-        nerd_font_variant = "mono",
-      },
-
-      completion = {
-        documentation = {
-          auto_show = true,
-        },
-      },
-
+    },
+  },
       sources = {
         default = {
           "lsp",
