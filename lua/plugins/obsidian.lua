@@ -24,7 +24,7 @@ return {
       -- COMPLETION
       ------------------------------------------------------------------
       completion = {
-        nvim_cmp = true,
+        blinkcmp = true,
         min_chars = 2,
       },
 
