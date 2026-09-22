@@ -17,6 +17,7 @@ vim.opt.timeoutlen = 300
 
 vim.keymap.set("n", "<Tab>", ":bnext<CR>")
 vim.keymap.set("n", "<S-Tab>", ":bprevious<CR>")
+vim.keymap.set("n", "<F6>", ":w<CR>:!g++ % -o %:r && ./%:r<CR>")
 
 vim.keymap.set("n", "<leader>ff", function()
   pcall(function()
